@@ -1,0 +1,39 @@
+:root {
+    --lines-color:#D8D8D8;
+    --btn-and-text-title-color: #0A3871;
+    --text-color-results: #495057;
+    --background-nav:rgb(50, 167, 229);
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem es = a 10px*/    
+    scroll-behavior: smooth;
+}
+    
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+    
+ul {
+    list-style: none;
+}
+    
+a {
+    text-decoration: none;
+}
+    
+img {
+    max-width: 100%;
+    height: auto;
+}
+    
+.section {
+    padding: 32px 0 64px;
+}
+.container {
+    max-width: 768px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
