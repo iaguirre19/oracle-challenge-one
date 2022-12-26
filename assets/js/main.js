@@ -29,12 +29,26 @@ function eventos() {
 }
 
 function limpiar() {
-    frase.value = "";
-    printRes.value = "";
-    textIndeOne(false);
+  frase.value = "";
+  printRes.value = "";
+  textIndeOne(false);
+  activePrint(false);
   }
   
-  function textIndeOne(value){
+function activePrint(value) {
+  if(value) {
+    document.querySelector(".print__btns").classList.add("active-print");
+    document.querySelector(".cod_print").classList.add("active-print");
+  }else{
+    document.querySelector(".print__btns").classList.remove("active-print");
+    document.querySelector(".cod_print").classList.remove("active-print");
+
+  }
+}
+
+
+
+function textIndeOne(value){
     if(value){
       textOne.style = "display:none";
     }else {
@@ -63,6 +77,8 @@ function encriptar() {
     .replace(/o/gi, "ober")
     .replace(/u/gi, "ufat");
   printRes.value = textoCifrado;
+  activePrint(true);
+  console.log(printRes);
 }
 function desEncriptado() {
   let texto = frase.value.toLowerCase();
@@ -73,4 +89,6 @@ function desEncriptado() {
     .replace(/ober/gi, "o")
     .replace(/ufat/gi, "u");
   printRes.value = textoCifrado;
+  activePrint(true);
+
 }

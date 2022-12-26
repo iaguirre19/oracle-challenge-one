@@ -4,10 +4,13 @@
     --text-color-results: #495057;
     --background-nav:rgb(50, 167, 229);
     --body-background: #E5E5E5;
+    --white:#ffffff;
     /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 1000;
+    /*========== font ==========*/
+    --font:'Inter', sans-serif;
 }
 html {
     box-sizing: border-box;
@@ -26,6 +29,7 @@ body{
     max-width: 480px;
     margin: 0;
     background-color: var(--body-background);
+    font-family: var(--font);
 }    
 ul {
     list-style: none;
@@ -56,6 +60,7 @@ img {
     border-radius: 2rem;
     border: 1px solid var(--btn-and-text-title-color);
     box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    cursor: pointer;
 
 }
 /* Header */
@@ -205,7 +210,7 @@ header{
 .cod__data-input .labelOne{
     display: block;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--btn-and-text-title-color);
     font-weight: bold;
 }
@@ -237,22 +242,76 @@ header{
 .btns__content .btn:nth-child(2){
     background-color: white;
     color: var(--btn-and-text-title-color);
+    font-size: 1.6rem;
 }
 /* Print result */
-#printCopy, #printClean{
-    display: none;
-}
 .cod_print{
-    width: 80%;
+    width: 90%;
     height: 15rem;
-    margin: 0 auto;
-    background-color: white;
+    display: grid;
+    place-content: center;
+    margin: 5rem auto 0;
+    background-color: var(--white);
     text-align: center;
     border-radius: 1rem;
     padding: 2rem 1rem;
+    box-shadow:0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    z-index: -10;
+    position: relative;
+}
+.cod_print.active-print{
+    height: 60rem;
+    box-shadow: none;
+    background-color: var(--body-background);
+}
+.cod_print label{
+    width: 80%;
+    margin: 0 auto;
+}
+.cod_print label h2{
+    font-size:2rem;
+    font-weight: 600;
+    opacity: .8;
+    
+}
+.cod_print label p{
+    font-size: 1.6rem;
+    color: var(--text-color-results);
+}
+.print__btns{
+    display: none;
+}
+.print__btns.active-print{
+    display: block;
 }
 #printContent{
-    display: none;
+    background-color: var(--body-background);
+    height: 50rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    border: none;
+    font-size: 1.7rem;
+    color: var(--text-color-results);
+    /* z-index: -5; */
+    resize: none;
+}
+.print__btns input{
+    position: absolute;
+    bottom: 0;
+}
+#printCopy{
+    bottom: 3rem;
+    margin-left: .8rem;
+}
+#printClean{
+    right: 1rem;
+    color: var(--btn-and-text-title-color);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 
