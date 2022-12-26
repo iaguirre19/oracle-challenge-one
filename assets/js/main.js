@@ -6,6 +6,7 @@ const btncopiar = document.querySelector("#printCopy");
 const btnlimpiar = document.querySelector("#printClean");
 const navMenu = document.querySelector("#navMenu");
 const navMobile = document.querySelector(".nav__menu");
+const textOne = document.querySelector(".labelOne");
 let clave = ["enter", "ober", "imes", "ai", "ufat"];
 let letras = ["e", "o", "i", "a", "u"];
 let textParaDesencriptar = [];
@@ -30,6 +31,15 @@ function eventos() {
 function limpiar() {
     frase.value = "";
     printRes.value = "";
+    textIndeOne(false);
+  }
+  
+  function textIndeOne(value){
+    if(value){
+      textOne.style = "display:none";
+    }else {
+      textOne.style = 'display: block'
+  }
 }
 
 function copiar() {
@@ -40,6 +50,9 @@ navMenu.addEventListener('click', () => {
     navMenu.classList.toggle("active");
     navMobile.classList.toggle("active-mobile");
 });
+textOne.addEventListener('click', () => {
+    textIndeOne(true)
+})
 
 function encriptar() {
   let texto = frase.value.toLowerCase();

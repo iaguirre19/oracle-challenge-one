@@ -58,7 +58,8 @@
             <div class="cod__container">
                 <div class="cod__content">
                     <div class="cod__data-input">
-                        <textarea id="inputOne" class="input-one" cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
+                        <label class="labelOne" for="inputOne">Ingresa tu texto aqui</label>
+                        <textarea id="inputOne" class="input-one" cols="30" rows="10" ></textarea>
                         <!-- <input id="inputOne" class="input-one" type="text" placeholder="Ingresa el texto aqui"> -->
                     </div>
                     <div class="cod__btns">
@@ -67,8 +68,8 @@
                             <span>Solo letras minusculas y sin acentos</span>
                         </div>
                         <div class="btns__content">
-                            <input id="inputCript" type="button" value="Encriptar">
-                            <input id="inputDcript" type="button" value="Desencriptar">
+                            <input id="inputCript" class="btn" type="button" value="Encriptar">
+                            <input id="inputDcript" class="btn" type="button" value="Desencriptar">
                         </div>
                     </div>
                     <div class="cod_print">
@@ -76,9 +77,9 @@
                             <h2>Ningun mensaje fue encontrado</h2>
                             <p>Ingrese el texto que desees encriptar o Desencriptar</p>
                         </label>
-                        <input id="printContent" type="text">
-                        <div class="print__btns">
-                            <input id="printCopy" type="button" value="Copiar">
+                        <div class="print__btns print__text">
+                            <input id="printContent" type="text">
+                            <input id="printCopy" class="btn" type="button" value="Copiar">
                             <input id="printClean" type="button" value="Limpiar">
                         </div>
                         
