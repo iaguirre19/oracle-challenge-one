@@ -10,15 +10,6 @@
 </head>
 <body>
     <header>
-        <div class="nav-hamburguer" id="navMenu"> <!--Here hamburger menu-->
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="log-icon">
-            <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" alt="alura logo">
-            <img src="https://cdn2.gnarususercontent.com.br/6/449886/ad7c0ade-9666-444f-b034-a5167845f978.png" alt="oracle logo">
-        </div>
         <nav class="nav__menu">
             <ul>
                 <li>
@@ -51,13 +42,24 @@
                 </li>
             </ul>
         </nav>
+        <div class="nav-hamburguer" id="navMenu"> <!--Here hamburger menu-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="log-icon">
+            <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" alt="alura logo">
+            <img src="https://cdn2.gnarususercontent.com.br/6/449886/ad7c0ade-9666-444f-b034-a5167845f978.png" alt="oracle logo">
+        </div>
+        <div class="nav__line"></div>
     </header>
     <main>
         <section class="section">
             <div class="cod__container">
                 <div class="cod__content">
                     <div class="cod__data-input">
-                        <input id="inputOne" class="input-one" type="text" placeholder="Ingresa el texto aqui">
+                        <textarea id="inputOne" class="input-one" cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
+                        <!-- <input id="inputOne" class="input-one" type="text" placeholder="Ingresa el texto aqui"> -->
                     </div>
                     <div class="cod__btns">
                         <div class="btns__alert-text">
@@ -81,31 +83,10 @@
                         </div>
                         
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
-
-
-
-
-    <!-- <input type="text" id="textoEncriptado">
-        <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" placeholder="Ingresa tu texto aqui"></textarea>
-        <button type="button" id="botonEncriptado">Encriptar</button>
-        <button type="button" id="botonDesencriptado">Desencriptar</button>
-        <button type="button" id="botonCopiar">Copiar</button>
-        <button type="button" id="limpiar">Limpiar</button> -->
-
-    
-
-
-
-
-
-
-
-
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@ const botonDesencriptado = document.querySelector("#inputDcript");
 const btncopiar = document.querySelector("#printCopy");
 const btnlimpiar = document.querySelector("#printClean");
 const navMenu = document.querySelector("#navMenu");
+const navMobile = document.querySelector(".nav__menu");
 let clave = ["enter", "ober", "imes", "ai", "ufat"];
 let letras = ["e", "o", "i", "a", "u"];
 let textParaDesencriptar = [];
@@ -37,6 +38,7 @@ function copiar() {
 }
 navMenu.addEventListener('click', () => {
     navMenu.classList.toggle("active");
+    navMobile.classList.toggle("active-mobile");
 });
 
 function encriptar() {
