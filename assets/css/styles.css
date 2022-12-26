@@ -8,6 +8,8 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1 rem es = a 10px*/    
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
     
 *,
@@ -15,7 +17,10 @@ html {
 *:after {
     box-sizing: inherit;
 }
-    
+body{
+    max-width: 578px;
+    margin: 0;
+}    
 ul {
     list-style: none;
 }
@@ -27,6 +32,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
     
 .section {
@@ -36,4 +42,67 @@ img {
     max-width: 768px;
     margin-left: 24px;
     margin-right: 24px;
+}
+/* Header */
+header{
+    max-width: 100%;
+    height: 7rem;
+    /* background-color: #D8D8D8; */
+    display: flex;
+    position: relative;
+}
+.log-icon{
+    position: relative;
+    left: 25%;
+}
+.log-icon img{
+    display: inline-block;
+    text-align: center;
+}
+.nav__menu{
+    display: none;
+}
+
+/* Nav Hamburger */
+.nav-hamburguer{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 30px;
+    transition:.2s;
+    z-index: var(--z-fixed);
+}
+.nav-hamburguer > span{
+    display: block;
+    width: 28px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color:var(--lines-color);
+}
+.nav-hamburguer > span:not(:last-child){
+    margin-bottom: 7px;
+}
+.nav-hamburguer, .nav-hamburguer > span{
+    transition: all .4s ease-in-out;
+}
+.nav-hamburguer.active{
+    transition-delay: 0.5s;
+    transform: rotate(45deg);
+}
+.nav-hamburguer.active > span:nth-child(2){
+    width: 0;
+}
+.nav-hamburguer.active > span:nth-child(1),
+.nav-hamburguer.active > span:nth-child(3){
+    transition-delay: .4s;
+}
+.nav-hamburguer.active > span:nth-child(1),
+.nav-hamburguer.active > span:nth-child(3){
+    background-color: white;
+}
+.nav-hamburguer.active > span:nth-child(1) {
+    transform: translateY(9px);
+}
+.nav-hamburguer.active > span:nth-child(3){
+    transform: translateY(-9px) rotate(90deg);
 }

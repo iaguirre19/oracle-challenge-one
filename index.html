@@ -5,28 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto Oracle One</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-hamburguer" id="navMenu"> <!--Here hamburger menu-->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="log-icon">
-                <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" alt="alura logo">
-                <img src="https://cdn2.gnarususercontent.com.br/6/449886/ad7c0ade-9666-444f-b034-a5167845f978.png" alt="oracle logo">
-            </div>
+        <div class="nav-hamburguer" id="navMenu"> <!--Here hamburger menu-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="log-icon">
+            <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" alt="alura logo">
+            <img src="https://cdn2.gnarususercontent.com.br/6/449886/ad7c0ade-9666-444f-b034-a5167845f978.png" alt="oracle logo">
+        </div>
+        <nav class="nav__menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="uil uil-left-to-right-text-direction"></i>
+                        <span>Challenge One</span>
+                        <!-- <i class="uil uil-arrow-down"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="uil uil-bag"></i>
+                        <span>Portfolio</span>
+                        <!-- <i class="uil uil-arrow-down"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="uil uil-linkedin-alt"></i>
+                        <span>Linkdln</span>
+                        <!-- <i class="uil uil-arrow-down"></i> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="uil uil-github-alt"></i>
+                        <span>Github</span>
+                        <!-- <i class="uil uil-arrow-down"></i> -->
+                    </a>
+                </li>
+            </ul>
         </nav>
-        <div class="down-line"></div>
     </header>
     <main>
         <section class="section">
-            <div class="container"></div>
+            <div class="cod__container">
+                <div class="cod__content">
+                    <div class="cod__data-input">
+                        <input id="inputOne" class="input-one" type="text" placeholder="Ingresa el texto aqui">
+                    </div>
+                    <div class="cod__btns">
+                        <div class="btns__alert-text">
+                            <i class="uil uil-exclamation-circle"></i>
+                            <span>Solo letras minusculas y sin acentos</span>
+                        </div>
+                        <div class="btns__content">
+                            <input id="inputCript" type="button" value="Encriptar">
+                            <input id="inputDcript" type="button" value="Desencriptar">
+                        </div>
+                    </div>
+                    <div class="cod_print">
+                        <label id="print__box" for="inputOne">
+                            <h2>Ningun mensaje fue encontrado</h2>
+                            <p>Ingrese el texto que desees encriptar o Desencriptar</p>
+                        </label>
+                        <input id="printContent" type="text">
+                        <div class="print__btns">
+                            <input id="printCopy" type="button" value="Copiar">
+                            <input id="printClean" type="button" value="Limpiar">
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
+
+
+
+
+    <!-- <input type="text" id="textoEncriptado">
+        <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" placeholder="Ingresa tu texto aqui"></textarea>
+        <button type="button" id="botonEncriptado">Encriptar</button>
+        <button type="button" id="botonDesencriptado">Desencriptar</button>
+        <button type="button" id="botonCopiar">Copiar</button>
+        <button type="button" id="limpiar">Limpiar</button> -->
 
     
 
