@@ -7,6 +7,7 @@ const btnlimpiar = document.querySelector("#printClean");
 const navMenu = document.querySelector("#navMenu");
 const navMobile = document.querySelector(".nav__menu");
 const textOne = document.querySelector(".labelOne");
+const btnChallenge = document.querySelector(".nav-js");
 let clave = ["enter", "ober", "imes", "ai", "ufat"];
 let letras = ["e", "o", "i", "a", "u"];
 let textParaDesencriptar = [];
@@ -20,6 +21,12 @@ function limpiarTextarea() {
   printRes.value = "";
 }
 
+function limpiar() {
+  frase.value = "";
+  printRes.value = "";
+  textIndeOne(false);
+  activePrint(false);
+  }
 eventos();
 function eventos() {
   btnEncriptar.addEventListener("click", encriptar);
@@ -28,36 +35,29 @@ function eventos() {
   btnlimpiar.addEventListener("click", limpiar);
 }
 
-function limpiar() {
-  frase.value = "";
-  printRes.value = "";
-  textIndeOne(false);
-  activePrint(false);
-  }
+// document.querySelectorAll(".nav-js").forEach((item) => {
+//   item.addEventListener("click", () => {
+//     navMenu.classList.remove("active");
+//     navMobile.classList.remove("active-mobile");
+//     backMenu.classList.remove("active-backmenu");
+//   });
+// });
+
+btnChallenge.addEventListener('click', () =>{
+  console.log("click challenge")
+  navMenu.classList.remove("active");
+  navMobile.classList.remove("active-mobile");
+})
   
 function activePrint(value) {
   if(value) {
     document.querySelector(".print__btns").classList.add("active-print");
-    document.querySelector(".cod_print").classList.add("active-print");
     document.querySelector("#print__box").classList.add("active-print");
   }else{
     document.querySelector(".print__btns").classList.remove("active-print");
-    document.querySelector(".cod_print").classList.remove("active-print");
     document.querySelector("#print__box").classList.remove("active-print");
-
   }
 }
-
-
-
-function textIndeOne(value){
-    if(value){
-      textOne.style = "display:none";
-    }else {
-      textOne.style = 'display: block'
-  }
-}
-
 function copiar() {
     const mensaje = printRes.value;
     navigator.clipboard.writeText(mensaje);
@@ -66,9 +66,9 @@ navMenu.addEventListener('click', () => {
     navMenu.classList.toggle("active");
     navMobile.classList.toggle("active-mobile");
 });
-textOne.addEventListener('click', () => {
-    textIndeOne(true)
-})
+// textOne.addEventListener('click', () => {
+//     textIndeOne(true)
+// })
 
 function encriptar() {
   let texto = frase.value.toLowerCase();
