@@ -39,9 +39,11 @@ function activePrint(value) {
   if(value) {
     document.querySelector(".print__btns").classList.add("active-print");
     document.querySelector(".cod_print").classList.add("active-print");
+    document.querySelector("#print__box").classList.add("active-print");
   }else{
     document.querySelector(".print__btns").classList.remove("active-print");
     document.querySelector(".cod_print").classList.remove("active-print");
+    document.querySelector("#print__box").classList.remove("active-print");
 
   }
 }
