@@ -1,13 +1,14 @@
-const frase = document.querySelector("#inputOne"); //tolowercase es una funcion que lo que hace es que nos devulve todo en minusculas.
+const frase = document.querySelector("#inputOne"); 
 const printRes = document.querySelector("#printContent");
 const btnEncriptar = document.querySelector("#inputCript");
 const botonDesencriptado = document.querySelector("#inputDcript");
 const btncopiar = document.querySelector("#printCopy");
-const btnlimpiar = document.querySelector("#printClean");
 const navMenu = document.querySelector("#navMenu");
 const navMobile = document.querySelector(".nav__menu");
 const textOne = document.querySelector(".labelOne");
 const btnChallenge = document.querySelector(".nav-js");
+const newText = document.querySelector(".new-text");
+const backgroundBlack = document.querySelector(".background-black");
 let clave = ["enter", "ober", "imes", "ai", "ufat"];
 let letras = ["e", "o", "i", "a", "u"];
 let textParaDesencriptar = [];
@@ -32,21 +33,14 @@ function eventos() {
   btnEncriptar.addEventListener("click", encriptar);
   botonDesencriptado.addEventListener("click", desEncriptado);
   btncopiar.addEventListener("click", copiar);
-  btnlimpiar.addEventListener("click", limpiar);
 }
-
-// document.querySelectorAll(".nav-js").forEach((item) => {
-//   item.addEventListener("click", () => {
-//     navMenu.classList.remove("active");
-//     navMobile.classList.remove("active-mobile");
-//     backMenu.classList.remove("active-backmenu");
-//   });
-// });
 
 btnChallenge.addEventListener('click', () =>{
   console.log("click challenge")
   navMenu.classList.remove("active");
   navMobile.classList.remove("active-mobile");
+  backgroundBlack.classList.remove("active-black");
+
 })
   
 function activePrint(value) {
@@ -61,14 +55,20 @@ function activePrint(value) {
 function copiar() {
     const mensaje = printRes.value;
     navigator.clipboard.writeText(mensaje);
+    activePrint(false);
+    limpiarInput();
+
 }
+newText.addEventListener("click", () => {
+  limpiarInput();
+  activePrint(false);
+});
 navMenu.addEventListener('click', () => {
     navMenu.classList.toggle("active");
     navMobile.classList.toggle("active-mobile");
+    backgroundBlack.classList.toggle("active-black");
+
 });
-// textOne.addEventListener('click', () => {
-//     textIndeOne(true)
-// })
 
 function encriptar() {
   let texto = frase.value.toLowerCase();
@@ -80,7 +80,6 @@ function encriptar() {
     .replace(/u/gi, "ufat");
   printRes.value = textoCifrado;
   activePrint(true);
-  console.log(printRes);
 }
 function desEncriptado() {
   let texto = frase.value.toLowerCase();
