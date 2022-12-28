@@ -269,6 +269,7 @@ header{
     background-color: var(--btn-and-text-title-color);
     color: white;
     font-size: 1.6rem;
+    border: none;
 }
 .btns__content .btn:nth-child(2){
     background-color: white;
@@ -331,12 +332,12 @@ header{
     visibility: visible;
     z-index: var(--z-fixed);
     background-color: var(--white);
-    border-radius: 2rem;
+    border-radius: 4rem;
     box-shadow: var(--shadow);
 }
 .print__btns.active-print #printContent{
     background-color: var(--white);
-    border-radius: 2rem;
+    border-radius: 4rem;
 }
 
 #printContent{
@@ -550,15 +551,17 @@ header{
         margin-bottom: 0;
     }
     .btns__content .btn:nth-child(1):hover{
-        background-color: #083AA9;
+        background-color: #FF7000;
+        color: white;
     }
     .btns__content .btn:nth-child(2){
-        transition: all .9s;
+        transition: all .4s;
         margin-bottom: 0;
     }
     .btns__content .btn:nth-child(2):hover{
-        background-color: var(--text-color-results);
+        background-color: #FF7000;
         color: white;
+        border: none;
     }
     .cod__btns{
         display: flex;
@@ -567,5 +570,11 @@ header{
     }
     #printCopy{
         font-size: 2rem;
+        /* transition: .4s; */
+        font-weight: bold;
+        background-color: #FF7000;
+    }
+    #printCopy:hover{
+        background-color: #f80102;
     }
 }
