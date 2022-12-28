@@ -40,7 +40,7 @@ btnChallenge.addEventListener('click', () =>{
   navMenu.classList.remove("active");
   navMobile.classList.remove("active-mobile");
   backgroundBlack.classList.remove("active-black");
-
+  
 })
   
 function activePrint(value) {
