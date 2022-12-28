@@ -199,7 +199,7 @@ header{
     max-width: 90%;
     padding: 0 2rem 1rem;
     margin: 0 auto;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .cod__content{
     height: 100%;
@@ -359,6 +359,18 @@ header{
     color: var(--white);
     font-size: 1.7rem;
     border: none;
+}
+footer{
+    margin: 3rem auto;
+}
+.footer__copy{
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-color-results);
+}
+.footer__copy::first-letter{
+    color: var(--btn-and-text-title-color);
+    font-size: 1.6rem;
 }
 /* Media query tablet devices */
 @media (min-width: 481px) { 
