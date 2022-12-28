@@ -218,11 +218,10 @@ header{
     border: none;
     color: var(--btn-and-text-title-color);
     font-weight: bold;
-    font: bold;
     resize: none;
-    vertical-align: text-top;
     font-size: 1.5rem;
     background-color: var(--body-background);
+    opacity: .9;
 }
 .cod__data-input .input-one:focus{
     outline: none;
@@ -234,19 +233,28 @@ header{
     color: var(--btn-and-text-title-color);
     font-weight: bold;
 }
+.btns__alert-text{
+    display: flex;
+    height: 5rem;
+    margin-top: 2rem;
+}
 .btns__alert-text .uil-exclamation-circle{
     color: var(--btn-and-text-title-color);
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     margin-left: 1rem;
 }
-.btns__alert-text span{
+.btns__alert-text div{
+    margin-left: 1rem;
+}
+.btns__alert-text div span{
     color: var(--text-color-results);
     font-size: 1.5rem;
+    
 }
-.btns__alert-text p{
+.btns__alert-text div p{
     font-size: 1.5rem;
     padding: 0;
-    margin: 0 0 0 3.9rem;
+    margin: 0 0 0 .2rem;
     color: var(--text-color-results);     
 }
 .btns__alert-text p > label{
@@ -338,4 +346,39 @@ header{
     color: var(--white);
     font-size: 1.7rem;
     border: none;
+}
+/* Media query tablet devices */
+@media (min-width: 481px) { 
+    body{
+        max-width: 768px;
+    }
+    /* nav menu tablet responsive */
+    .nav__menu{
+        left: -50rem;
+    }
+    /* input one content */
+    .cod__data-input{
+        width: 90%;
+    }
+    .cod__data-input .labelOne{
+        display: block;
+        text-align: left;
+        font-size: 3rem;
+    }
+    .cod__data-input .input-one{
+        text-align: start;
+    }
+    .btns__alert-text{
+        align-items: center;
+    }
+    .btns__alert-text div{
+        display: flex;    
+    }
+    .btns__alert-text div span,
+    .btns__alert-text div p{
+        font-size: 1.9rem;
+    }
+    .btns__alert-text .uil-exclamation-circle{
+        font-size: 3.5rem;
+    }
 }
